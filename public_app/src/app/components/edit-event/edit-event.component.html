@@ -1,0 +1,74 @@
+<!-- breadcrumb -->
+<app-breadcrumb [content]="pageContent.header"></app-breadcrumb>
+<!-- breadcrumb end -->
+
+<!-- Page Content -->
+<div id="page-content">
+    <div class="container">
+        <header><h1>Edit Event</h1></header>
+        <section id="row my-profile">
+            <form (ngSubmit)="updateEvent(editEvent)">
+                <div class="col-md-10 col-sm-10 col-sm-offset-1 col-md-offset-1">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <label for="event-title">Event Title</label>
+                        <div class="form-group">
+                            <input [(ngModel)]="editEvent.title" type="text" class="form-control" id="event-title" name="event-title" placeholder="Event Title">
+                        </div>
+                        <label for="event-title">Event Speaker</label>
+                        <div class="form-group">
+                            <input [(ngModel)]="editEvent.speaker" type="text" class="form-control" id="event-speaker" name="event-speaker" placeholder="Event Title">
+                        </div>
+                        <label for="event-title">Event Date & Time</label>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" [(ngModel)]="editEvent.date" class="form-control" id="event-date" name="event-date" placeholder="Event Date | Formate : DD/MM/YYYY">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" [(ngModel)]="editEvent.time" class="form-control" id="event-time" name="event-time" placeholder="Event Time | Formate : HR:MIN AM/PM">
+                                </div>
+                            </div>  
+                        </div>
+                        <label for="event-title">Event Description </label>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea type="textarea" [(ngModel)]="editEvent.description" name="event-description" id="message" placeholder="Event Description" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <label for="event-title">Event Location</label>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input type="text" [(ngModel)]="editEvent.address" class="form-control" id="event-address" name="event-address" placeholder="Event Address">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input type="text" [(ngModel)]="editEvent.country" class="form-control" id="event-country" name="event-country" placeholder="Event Country">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input type="text" [(ngModel)]="editEvent.state" class="form-control" id="event-state" name="event-state" placeholder="Event State">
+                                </div>
+                            </div>  
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input type="text" [(ngModel)]="editEvent.postal" class="form-control" id="event-postal" name="event-postal" placeholder="Event Postal Code">
+                                </div>
+                            </div>  
+                        </div>
+                        <button type="submit" class="btn pull-right">Save & Create Event</button>
+                    </div>
+                </div>
+            </form>
+          
+        </section><!-- /#my-profile -->
+    </div><!-- /.container -->
+</div>
+<!-- end Page Content -->

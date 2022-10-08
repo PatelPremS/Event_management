@@ -1,0 +1,49 @@
+<!-- breadcrumb -->
+<app-breadcrumb [content]="pageContent.header"></app-breadcrumb>
+<!-- breadcrumb end -->
+
+<!-- Page Content -->
+<div id="page-content">
+    <div class="container">
+        <div class="row">
+            <!-- Course Image -->
+            <div class="col-md-2 col-sm-3">
+                <figure class="event-image">
+                    <div class="image-wrapper"><img src="assets/img/course-detail-img.jpg"></div>
+                </figure>
+            </div><!-- end Course Image -->
+            <!--MAIN Content-->
+            <div class="col-md-9 col-sm-9">
+                <div id="page-main">
+                    <section id="event-detail">
+                        <article class="event-detail">
+                            <section id="event-header">
+                                <header>
+                                    <h2 class="event-date">{{ newEvent.title }}</h2>
+                                </header>
+                                <hr>
+                                <!-- <div class="course-count-down" id="course-count-down">
+                                    <figure class="course-start">Event starts  in:</figure>
+                                    <div class="count-down-wrapper">
+                                        <script type="text/javascript">var _date = 'Jun 27, 2015 23:28';</script>
+                                    </div>
+                                </div> -->
+                                <!-- <hr> -->
+                                <figure>
+                                    <span class="course-summary" id="course-length"><i class="fa fa-map-marker"></i>{{ newEvent.address }}, {{ newEvent.state }},  {{ newEvent.postal }}, {{ newEvent.country }}</span>
+                                    <span class="course-summary" id="course-length"><i class="fa fa-user"></i>{{ newEvent.speaker }}</span>
+                                    <span class="course-summary" id="course-length"><i class="fa fa-calendar-o"></i>{{ newEvent.date }}</span>
+                                    <span class="course-summary" id="course-time-amount"><i class="fa fa-clock-o"></i>{{ newEvent.time }}</span>
+                                </figure>
+                            </section>
+                            <section id="course-info">
+                                <header><h2>Event Info</h2></header>
+                                {{ newEvent.description }}
+                            </section>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div>

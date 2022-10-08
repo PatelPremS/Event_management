@@ -1,0 +1,15 @@
+
+.icons i {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+    opacity: 0.6;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    color: #252525;
+    display: inline-block;
+    font-size: 18px;
+    margin-left: 15px;
+    padding: 2px 10px;
+    margin: 0px;
+}

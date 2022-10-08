@@ -1,0 +1,55 @@
+<div class="navigation-wrapper">
+    <div class="secondary-navigation-wrapper">
+        <div class="container">
+            <div class="navigation-contact pull-left">Call Us:  <span class="opacity-70">+1 226 899 4813</span></div>
+            <div class="search">
+                <div class="input-group">
+                    <input type="search" class="form-control" name="search" placeholder="Search">
+                    <span class="input-group-btn"><button type="submit" id="search-submit" class="btn"><i class="fa fa-search"></i></button></span>
+                </div><!-- /.input-group -->
+            </div>
+            <ul class="secondary-navigation list-unstyled">
+                <li><a routerLink="/create-event" routerLinkActive="active"><i class="fa fa-plus"></i>Create Event</a></li>
+                <li><a *ngIf="_authService.loggedIn()" routerLink="/account"><i class="fa fa-list"></i>My Events</a></li>
+                <li><a *ngIf="!_authService.loggedIn()" routerLink="/login">Login</a></li>
+                <li><a *ngIf="_authService.loggedIn()" routerLink="#" (click)="_authService.logoutUser()">Logout</a></li>
+            </ul>
+        </div>
+    </div><!-- /.secondary-navigation -->
+    <div class="primary-navigation-wrapper">
+        <header class="navbar" id="top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-brand nav" id="brand">
+                        <a href="index.html"><img src="assets/img/event_booking_logo.png" alt="brand"></a>
+                    </div>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a routerLink="/" routerLinkActive="active">Home</a>
+                        </li>
+                        <li>
+                            <a routerLink="/events" routerLinkActive="active">Events</a>
+                        </li>
+                        <li>
+                            <a routerLink="/about-us" routerLinkActive="active">About Us</a>
+                        </li>
+                        <li>
+                            <a routerLink="/contact-us" routerLinkActive="active">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav><!-- /.navbar collapse-->
+            </div><!-- /.container -->
+        </header><!-- /.navbar -->
+    </div><!-- /.primary-navigation -->
+    <div class="background">
+        <img src="assets/img/background-city.png" alt="background">
+    </div>
+  </div>

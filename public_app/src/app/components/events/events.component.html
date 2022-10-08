@@ -1,0 +1,84 @@
+<!-- <div class="row mt-5">
+    <div class="col-md-4 mb-3" *ngFor="let event of events">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">{{event.name}}</h5>
+                <p class="card-text">{{event.description}}</p>
+                <a href="#" class="btn btn-primary">Buy Tickets</a>
+            </div>
+            <div class="card-footer text-muted">
+                {{event.date | date}}
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- breadcrumb -->
+<app-breadcrumb [content]="pageContent.header"></app-breadcrumb>
+<!-- breadcrumb end -->
+
+<!-- Page Content -->
+<div id="page-content">
+    <div class="container">
+        <div class="row">
+            <!--MAIN Content-->
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div id="page-main">
+                    <section class="events images" id="events">
+                        <header><h1>Events</h1></header>
+                        <section id="event-search">
+                            <div class="search-box">
+                                <header><span class="fa fa-search"></span><h2>Find Events</h2></header>
+                                <form id="event-search-form" (ngSubmit)="searchEvent(search)" role="form" class="form-inline">
+                                    <div class="from-row">
+                                        <div class="form-group" style="width: 100%;">
+                                            <input name="full-text" [(ngModel)]="search" id="full-text" placeholder="Enter Keyword" type="text">
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn pull-right">Search</button>
+                                </form>
+                            </div>
+                        </section>
+                        <div class="row section-content">
+
+                            <div class="col-md-12" *ngFor="let event of events" style="margin-bottom: 10px;">
+                                <article class="event">
+                                    <div class="event-thumbnail">
+                                        <figure class="event-image">
+                                            <div class="image-wrapper"><img style="background-size: cover;" src="assets/img/event-img-01.jpg"></div>
+                                        </figure>
+                                    </div>
+                                    <aside>
+                                        <header>
+                                            <a routerLink="/event-details">{{event.title}}</a>
+                                        </header>
+                                        <div class="course-meta">
+                                            <div class="additional-info sidebyside"><span class="fa fa-map-marker"></span> {{event.address}}</div>
+                                            <div class="additional-info sidebyside"><span class="fa fa-user"></span> {{event.speaker}}</div>
+                                            <div class="additional-info sidebyside"><span class="fa fa-calendar-o"></span> {{event.date}}</div>
+                                            <div class="additional-info sidebyside"><span class="fa fa-clock-o"></span> {{event.time}}</div>
+                                        </div>
+                                        <div class="description">
+                                            <p>
+                                                {{event.description}}
+                                            </p>
+                                        </div>
+                                        <a routerLink="/event-details/{{event._id}}" class="btn btn-framed btn-color-grey btn-small">View Details</a>
+                                    </aside>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- <div class="center">
+                        <ul class="pagination">
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
